@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+    <test name="p0" preserve-order="true">
+        <classes>
+            <class name="com.github.jinkerry.Groups">
+                <groups>
+                    <run>
+                        <exclude name="p1"  />
+                        <include name="p0"  />
+                    </run>
+                </groups>
+            </class>
+        </classes>
+    </test>
+</suite>

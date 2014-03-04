@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+    <parameter name="host" value="smtp.163.com" />
+    <parameter name="port" value="25"   />
+
+    <test name="parameter" preserve-order="true">
+        <classes>
+            <class
+                name="com.github.jinkerry.Parameter">
+            </class>
+        </classes>
+    </test>
+</suite>
