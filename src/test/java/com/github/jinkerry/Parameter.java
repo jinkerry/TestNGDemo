@@ -18,7 +18,7 @@ public class Parameter {
 
     @Parameters({"host", "port"})
     @BeforeTest()
-    private void beforeTest(@Optional String host, @Optional String port) {
+    private void beforeTest(String host, @Optional("25") String port) {
         this.host = host;
         this.port = port;
     }
@@ -26,7 +26,7 @@ public class Parameter {
     @Test
     public void parameters() {
         String url = host + ":" + port;
-        System.out.println(url);
+        Assert.assertEquals(port, "25");
         Assert.assertEquals(url, "smtp.163.com:25");
 
     }
