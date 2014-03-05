@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
  */
 public class DataProviderTest {
 
-    @Test(dataProvider = "getData", dataProviderClass = Data.class)
-    public void insideData(String username, String password){
+    @Test(dataProvider = "getData")
+    public void data(String username, String password){
 
         User user = new User(username, password);
 
@@ -33,7 +33,16 @@ public class DataProviderTest {
 
 
     @Test(dataProvider = "getData", dataProviderClass = Data.class)
-    public void outsideData(String username, String password) {
+    public void oneData(String username, String password) {
+        User user = new User(username, password);
+
+        Assert.assertEquals(user.getUsername(), username);
+        Assert.assertEquals(user.getPassword(), password);
+
+    }
+
+    @Test(dataProvider = "getData", dataProviderClass = Data.class)
+    public void twoData(String username, String password) {
         User user = new User(username, password);
 
         Assert.assertEquals(user.getUsername(), username);

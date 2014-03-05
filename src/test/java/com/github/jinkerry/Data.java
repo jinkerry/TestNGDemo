@@ -13,17 +13,17 @@ public class Data {
 
     @DataProvider(name="getData")
     public static Object[][] getData(Method method){
-        System.out.println(method.getName());
-        if(method.getName().indexOf("inside") != -1)
+
+        if(method.getName().contains("one"))
             return new Object[][] {
-                    {"inside01", "password"},
-                    {"inside02", "test2014"},
+                    {"oneUser01", "password"},
+                    {"oneUser02", "test2014"},
 
             };
         else
             return new Object[][] {
-                    {"outside01", "password"},
-                    {"outside02", "test2014"},
+                    {"twoUser01", "password"},
+                    {"towUser02", "test2014"},
 
             };
     }
