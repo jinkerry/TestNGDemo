@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite"  parallel="methods" thread-count="8">
+    <test name="parallel" preserve-order="true">
+        <classes>
+            <class
+                name="com.github.jinkerry.Parallel">
+            </class>
+        </classes>
+    </test>
+</suite>
