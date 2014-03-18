@@ -50,4 +50,12 @@ public class DataProviderTest {
 
     }
 
+    @Test(dataProvider = "getUser", dataProviderClass = Data.class)
+    public void userNoEqualsPass(User user) {
+        Assert.assertNotNull(user);
+
+        Assert.assertNotEquals(user.getUsername(), user.getPassword(), "Username must not equals password");
+
+    }
+
 }

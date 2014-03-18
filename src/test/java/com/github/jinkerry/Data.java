@@ -27,4 +27,17 @@ public class Data {
 
             };
     }
+
+    @DataProvider(name = "getUser")
+    public static Object[][] getUser() {
+        User admin = new User("admin", "admin4pass");
+        User guest = new User("guest", "guest");
+
+
+        return new Object[][]{
+                {admin},
+                {guest},
+
+        };
+    }
 }
